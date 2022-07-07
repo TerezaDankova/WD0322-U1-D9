@@ -83,20 +83,17 @@ function boundary(n){
 
 console.log("\n-----------EXERCISE 5-----------\n");	
 
-let string = "Stive";
-let stringTwo = "Hello"
-
-function strivify(string){
-  for (let i = 0; i < string.length; i++){
-    let string = string.length[i];
-    if (string === "Strive"){
-      break
-    }if (stringTwo === "") {
-      continue;
-    }}
-    console.log(string);
-    console.log(string);
+let text = "Strive"
+let textTwo = "rs"
+function strivify(text) {
+  if (text == 0 || text === 'Strive') 
+  {
+    return text;
+  }
+  return "Strive"+text;
 }
+console.log(strivify(text));
+console.log(strivify(textTwo));
 
 
 /* EXERCISE 6
@@ -104,7 +101,7 @@ function strivify(string){
  HINT: Modulus Operator
 */
 
-console.log("\n-----------EXERCISE 5-----------\n");	
+console.log("\n-----------EXERCISE 6-----------\n");	
 
 function check3and7(u) {
   if (u % 3 == 0 || u % 7 == 0) 

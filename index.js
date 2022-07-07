@@ -83,18 +83,16 @@ function boundary(n){
 
 console.log("\n-----------EXERCISE 5-----------\n");	
 
-let text = "Strive"
-let textTwo = "rs"
 function strivify(text) {
-  if (text == 0 || text === 'Strive') 
-  {
+  if (text.startsWith("Strive") === true) {
+    return text;
+  }else {
+    text = "Strive" + text;
     return text;
   }
-  return "Strive"+text;
 }
-console.log(strivify(text));
-console.log(strivify(textTwo));
-
+console.log(strivify(" is good!"));
+console.log(strivify("Strive"));
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
@@ -104,7 +102,7 @@ console.log(strivify(textTwo));
 console.log("\n-----------EXERCISE 6-----------\n");	
 
 function check3and7(u) {
-  if (u % 3 == 0 || u % 7 == 0) 
+  if (u >= 0 && u % 3 == 0 || u % 7 == 0) 
   {
     return true;
   } 
@@ -146,6 +144,21 @@ for (let i = 0, x = str.length; i < x; i++) {
 
 console.log(upperFirst("Today is really hot."));
 
+console.log("\n-----------EXERCISE 8-----------\n");
+console.log("--------ANOTHER SOLUTION--------");
+
+function upperFirstSecond(strSecond){
+  let words = strSecond.split(" ");
+  for(let i = 0; i < words.length; i++){
+    let word = words[i].split(" ");
+    word[0] = word[0].toUpperCase();
+    let newWords = word.join(" ");
+    words[i] = newWords;
+    }
+    return words.join(" ");
+}
+
+console.log(upperFirstSecond("Today is really cold."));
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
@@ -153,14 +166,13 @@ console.log(upperFirst("Today is really hot."));
 
 console.log("\n-----------EXERCISE 9-----------\n");
 
-let stringThree = "Today is really hot.";
 
-function cutString(){
-let anotherString = stringThree.slice(1,-1);
-console.log(anotherString);
+function cutString(stringThree){
+anotherString = stringThree.slice(1,-1);
+return anotherString
 }
 
-console.log(cutString());
+console.log(cutString("Today is really hot."));
 
 
 /* EXERCISE 10

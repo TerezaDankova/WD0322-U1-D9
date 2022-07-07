@@ -48,11 +48,11 @@ function crazySum(x,y){
 
 console.log("\n-----------EXERCISE 3-----------\n");	
 
-function crazyDiff(n){
-    if(n<=19) {
-      return 19 - n
+function crazyDiff(f){
+    if(f<=19) {
+      return 19 - f
   } else {
-      return (19 - n)*3
+      return (19 - f)*3
   }
   }
   console.log("The absolute difference:",crazyDiff(14))
@@ -64,44 +64,126 @@ function crazyDiff(n){
 
 console.log("\n-----------EXERCISE 4-----------\n");	
 
+function boundary(n){
+  if (n > 20 && n < 100 || n === 400){
+    return true;
+  } else {
+    return false;
+  }
+}
+  console.log("Is n within 20 and 100 or it's equal to 400?", boundary(2))
+  console.log("Is n within 20 and 100 or it's equal to 400?", boundary(50))
+  console.log("Is n within 20 and 100 or it's equal to 400?", boundary(400))
+
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n-----------EXERCISE 5-----------\n");	
+
+let string = "Stive";
+let stringTwo = "Hello"
+
+function strivify(string){
+  for (let i = 0; i < string.length; i++){
+    let string = string.length[i];
+    if (string === "Strive"){
+      break
+    }if (stringTwo === "") {
+      continue;
+    }}
+    console.log(string);
+    console.log(string);
+}
+
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
  HINT: Modulus Operator
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n-----------EXERCISE 5-----------\n");	
+
+function check3and7(u) {
+  if (u % 3 == 0 || u % 7 == 0) 
+  {
+    return true;
+  } 
+  else {
+    return false;
+  }
+}
+
+console.log(check3and7(12));
+console.log(check3and7(14));
+console.log(check3and7(10));
+console.log(check3and7(11));
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n-----------EXERCISE 7-----------\n");
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("Strive"));
+
 
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n-----------EXERCISE 8-----------\n");
+
+function upperFirst(str) {
+  str = str.split(" ");
+for (let i = 0, x = str.length; i < x; i++) {
+      str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+  }
+ return str.join(" ");
+}
+
+console.log(upperFirst("Today is really hot."));
+
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n-----------EXERCISE 9-----------\n");
+
+let stringThree = "Today is really hot.";
+
+function cutString(){
+let anotherString = stringThree.slice(1,-1);
+console.log(anotherString);
+}
+
+console.log(cutString());
+
 
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n-----------EXERCISE 10-----------\n");
+
+function giveMeRandom(n) {
+  let arrWithNums = [];
+  for(i = 0; i < n; i++) {
+      arrWithNums.push(Math.floor(Math.random() * 10));  }
+  return arrWithNums;
+}
+
+console.log(giveMeRandom(4));
+console.log(giveMeRandom(8));
+
+console.log("\n---------------------------------\n");
+
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
